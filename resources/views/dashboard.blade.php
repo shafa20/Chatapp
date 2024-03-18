@@ -6,6 +6,7 @@
             <a href="{{ url('/chatify/' . auth()->id()) }}" class="bg-blue-500 rounded">
                 Click to Chat
             </a>
+            <a href="{{ route('onepage.index') }}" class="btn btn-info"> one page Image</a>
         </h2>
     </x-slot>
 

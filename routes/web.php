@@ -2,6 +2,17 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\OnePageController;
+
+// Display all images and handle create operation
+Route::get('/onepage', [OnePageController::class, 'index'])->name('onepage.index');
+Route::post('/onepage', [OnePageController::class, 'store'])->name('onepage.store');
+
+// Handle update operation
+Route::put('/onepage/{onepage}', [OnePageController::class, 'update'])->name('onepage.update');
+
+// Handle delete operation
+Route::delete('/onepage/{onepage}', [OnePageController::class, 'destroy'])->name('onepage.destroy');
 
 Route::get('/', function () {
     return view('welcome');
